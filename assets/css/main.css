@@ -1,0 +1,378 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none !important;
+}
+
+.overflow {
+  overflow: hidden !important;
+}
+
+body,
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  background-color: white;
+  font-family: TanseekMedium;
+  font-size: 17px;
+  color: black;
+  overflow-x: hidden;
+}
+
+@media (max-width: 1500px) {
+  body,
+  html {
+    font-size: 16px;
+  }
+}
+
+@font-face {
+  font-family: "TanseekLight";
+  src: url("../fonts/TanseekModernProArabic-Light.woff2") format("woff2"), url("../fonts/TanseekModernProArabic-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TanseekMedium";
+  src: url("../fonts/TanseekModernProArabic-Medium.woff2") format("woff2"), url("../fonts/TanseekModernProArabic-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1 {
+  font-family: TanseekLight;
+  font-size: 48px;
+  margin: 0;
+}
+
+h2 {
+  font-family: TanseekMedium;
+  font-size: 60px;
+  margin: 0;
+}
+
+h3 {
+  font-family: TanseekMedium;
+  font-size: 48px;
+  margin: 0;
+}
+
+h4 {
+  font-family: TanseekMedium;
+  font-size: 40px;
+  margin: 0;
+}
+
+h5 {
+  font-family: TanseekMedium;
+  font-size: 30px;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1600px;
+  }
+}
+
+.c2 {
+  width: 1170px;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  margin: 0;
+}
+
+.row > div {
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  height: 768px;
+  background-image: url("../img/header/header-Pattern.png"), linear-gradient(rgba(0, 0, 0, 0.99), rgba(0, 0, 0, 0.99)), url("../img/header/header.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover, auto;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 130px;
+}
+
+header .header-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+header .header-content h1 {
+  margin-bottom: 120px;
+  margin-top: 33px;
+  position: relative;
+}
+
+header .header-content h1::before {
+  content: "";
+  background-color: #535353;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 41px;
+  height: 1px;
+  border-radius: 15px;
+}
+
+header .header-content .header-scroll {
+  width: 19px;
+  height: 37px;
+  border-radius: 20px;
+  border: 1px solid white;
+  position: relative;
+}
+
+header .header-content .header-scroll .scroll-dot {
+  width: 3px;
+  height: 7px;
+  background-color: white;
+  margin: 0 auto;
+  transition: all 0.3s;
+  position: absolute;
+  top: 11px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: scroll 5s ease-in-out 3s infinite both;
+}
+
+@keyframes scroll {
+  0% {
+    top: 11px;
+  }
+  15% {
+    top: 22px;
+  }
+  20% {
+    top: 11px;
+  }
+  100% {
+    top: 11px;
+  }
+}
+
+#about {
+  padding-top: 90px;
+  padding-bottom: 55px;
+  background-image: url("../img/about/about.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto;
+}
+
+#about .about-items {
+  display: flex;
+  justify-content: space-around;
+}
+
+#about .about-items .about-item {
+  width: 42%;
+}
+
+#about .about-items .about-item h2 {
+  margin-bottom: 40px;
+}
+
+#about .about-items .about-item p {
+  font-size: 30px;
+  font-family: TanseekLight;
+  max-width: 480px;
+}
+
+#about .about-items .en h2 {
+  font-size: 48px;
+  margin-top: 10px;
+}
+
+#about .about-items .en p {
+  max-width: 455px;
+}
+
+#team {
+  padding: 150px 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.99)), url("../img/team/team.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+#team .team-content h2 {
+  margin-bottom: 30px;
+}
+
+#team .team-content p {
+  font-size: 36px;
+  font-family: TanseekLight;
+  width: 80%;
+  max-width: 770px;
+}
+
+#fields {
+  padding: 100px 0;
+}
+
+#fields .fields-head h2 {
+  margin-bottom: 38px;
+}
+
+#fields .fields-head .border {
+  background-color: #535353;
+  width: 70px;
+  height: 1px;
+  border-radius: 15px;
+  margin-bottom: 75px;
+}
+
+#fields .fields-body {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#fields .fields-body .field {
+  display: flex;
+  width: 47%;
+  margin-bottom: 60px;
+}
+
+#fields .fields-body .field .field-img {
+  margin-left: 35px;
+  padding-top: 15px;
+}
+
+#fields .fields-body .field .field-text h5 {
+  margin-bottom: 20px;
+}
+
+#fields .fields-body .field .field-text p {
+  font-size: 24px;
+  font-family: TanseekLight;
+}
+
+#projects .projects-head {
+  height: 233px;
+  background-image: url("../img/projects/work-head.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 49% 100%;
+  margin-bottom: 80px;
+}
+
+#projects .projects-head .c2 {
+  display: flex;
+  align-items: center;
+}
+
+#projects .projects-head .head-title h2 {
+  color: white;
+}
+
+#projects .projects-head .head-link {
+  margin-right: auto;
+}
+
+#projects .projects-head .head-link a {
+  font-size: 60px;
+  font-family: TanseekLight;
+}
+
+#projects .projects-head .head-link a span {
+  font-size: 30px;
+}
+
+#projects .projects-body .project {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+
+#projects .projects-body .project > div {
+  width: 49%;
+}
+
+#projects .projects-body .project .project-title {
+  position: relative;
+}
+
+#projects .projects-body .project .project-title h4 {
+  margin-bottom: 30px;
+}
+
+#projects .projects-body .project .project-title p {
+  font-size: 26px;
+  font-family: TanseekLight;
+}
+
+#projects .projects-body .project .project-img img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+#projects .projects-body .project .project-img img:hover {
+  transform: scale(1.05);
+}
+
+#projects .projects-body .project:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+/*# sourceMappingURL=main.css.map */
